@@ -16,4 +16,18 @@
 
 $(document).ready(function() {
   $('.button-collapse').sideNav();
+  setHandlers()
 });
+
+function setHandlers() {
+  $('.cohort-number').on('click', getCohortData );
+}
+
+function getCohortData(event) {
+  event.preventDefault();
+  var megacohort = event.currentTarget.innerText
+  $.getJSON("http://localhost:2000/api/v1/enrollments", {
+    megacohort: megacohort
+  }, alert('hi'))
+  console.log('i tried getting cohort data')
+}
