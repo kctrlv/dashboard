@@ -29,9 +29,8 @@ function getCohortData(event) {
   $.getJSON("http://localhost:2000/api/v1/enrollments",
             { megacohort: megacohort },
             function() {alert('hi')})
-  function() {
-    $('.analytics').append('<p>hi</p>')
-  }
+  $('.backend-enrolled').html(`<p>${megacohort}</p>`)
+  $('.frontend-enrolled').html(`<p>${megacohort}</p>`)
 }
 
 // function displayMegaCohortData(data) {
