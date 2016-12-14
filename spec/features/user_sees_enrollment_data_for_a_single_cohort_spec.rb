@@ -7,9 +7,16 @@ describe "Dashboard" do
     #as an authenticated user
     #when I visit the landing page
     visit '/'
+    #i should not see the cohort data for 1701 already displayed
+    within(".backend-enrolled") do
+      expect(page).not_to have_content('21/28 enrolled')
+    end
+    #and I see the number of seats filled in 1701 frontend
+    within(".frontend-enrolled") do
+      expect(page).not_to have_content('14/28 enrolled')
+    end
     #and I click the link for cohort 1701
     click_link '1701'
-
     #then I see the number of seats filled in 1701 backend
     within(".backend-enrolled") do
       expect(page).to have_content('21/28 enrolled')

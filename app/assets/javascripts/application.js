@@ -26,10 +26,21 @@ function setHandlers() {
 function getCohortData(event) {
   event.preventDefault();
   var megacohort = event.currentTarget.innerText
-  $.getJSON("http://localhost:2000/api/v1/enrollments", {
-    megacohort: megacohort },
-   function(){
-    alert('hi')
-  })
-  console.log('i tried getting cohort data')
+  $.getJSON("http://localhost:2000/api/v1/enrollments",
+            { megacohort: megacohort },
+            function() {alert('hi')})
+  function() {
+    $('.analytics').append('<p>hi</p>')
+  }
 }
+
+// function displayMegaCohortData(data) {
+//   // <div class="row charts">
+//   //   <div class="backend-enrolled col s6 center">
+//   //     <p>21/28 enrolled</p>
+//   //   </div>
+//   //   <div class="frontend-enrolled col s6 center">
+//   //     <p>14/28 enrolled</p>
+//   //   </div>
+//   // </div>
+// }
