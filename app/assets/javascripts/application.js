@@ -27,7 +27,9 @@ function getCohortData(event) {
   event.preventDefault();
   var megacohort = event.currentTarget.innerText
   $.getJSON("http://localhost:2000/api/v1/enrollments", {
-    megacohort: megacohort
-  }, alert('hi'))
+    megacohort: megacohort },
+   function(){
+    alert('hi')
+  })
   console.log('i tried getting cohort data')
 }
