@@ -1,8 +1,11 @@
 <header>
   <ul id='slide-out' class="side-nav fixed">
-    <a href="#" class='cohort-number'>1701<a>
-    <a href="#" class='cohort-number'>1703<a>
-    <a href="#" class='cohort-number'>1705<a>
+    <a class='dropdown-button btn' data-gutter='15' href='#!' data-activates='dropdown1'>Cohorts</a>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!" class='cohort-number waves-effect'>1701</a></li>
+      <li><a href="#!" class='cohort-number waves-effect'>1703</a></li>
+      <li><a href="#!" class='cohort-number waves-effect'>1705</a></li>
+    </ul>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 </header>
@@ -10,11 +13,10 @@
 <main>
   <div class="container analytics">
     <div class="row charts">
+      <h1 class="megacohort center"></h1>
       <div class="backend-enrolled col s6 center">
-
       </div>
       <div class="frontend-enrolled col s6 center">
-
       </div>
     </div>
   </div>
